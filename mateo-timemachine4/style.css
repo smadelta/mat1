@@ -411,7 +411,8 @@ p{
   font-family: "Baloo Da 2",serif;
   font-size: 1.2rem;
   color: #fff;
-  margin: 0 1rem;
+  text-align: center;
+  margin-left: -8rem;
 }
 .copyright p{
     padding-bottom: 0;
@@ -441,6 +442,9 @@ p{
     .menu-link{
         font-size: 1.6rem;
     }
+    .copyright {
+        margin-left: -1rem;
+    }
 }
 @media(max-width:1000px){
     .banner h1{
@@ -456,7 +460,7 @@ p{
         font-size: .8rem;
     }
     .banner button:hover {
-        width: 13rem;
+        width: 12rem;
     }
     .footer{
         height: 16rem;
@@ -567,6 +571,9 @@ p{
     }
     .banner button{
         margin-top: 1rem;
+    }
+    .banner button:hover {
+        width: 13rem;
     }
 } 
 
