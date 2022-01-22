@@ -23,7 +23,7 @@ p{
   padding-bottom: 1rem;
   margin: 0 9%;
 }
-.app, .app2, .photos{
+.app, .app2{
     background-color: #fafafa;
 }
 .hamburger-menu{
@@ -99,7 +99,7 @@ p{
     left: 3rem;
 }
 .logo img{
-    max-height: 20rem;
+    max-height: 5rem;
     width: auto;
 }
 .banner{
@@ -254,12 +254,10 @@ p{
 .menu-link:hover::before{
     width: 100%;
 }
-.menu-logo{
-    position: absolute;
-    top: -8rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+
+.menu-logo img{
+    max-height: 5rem;
+    margin-bottom: 12rem;
 }
 .social{
     position: absolute;
@@ -469,43 +467,72 @@ p{
 /*------------- footer ------------*/
 
 
-.footer{
-    background-color: #fdc533;
-    width: 100%;
-    height: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.footer2{
+    display: grid;
+    grid-template-columns: 1fr 2.4fr 1fr;
+    grid-template-rows: 2fr 2fr 1fr;
+    background-color: #7fa8bf;
+    height: 24rem;
+    overflow: hidden;
 }
-.footer-content{
-    width: 95%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
+.footer2 .copyright2{
+    grid-column:1 / 4;
+    grid-row: 3;
+    margin: auto;
+    font-size: 1.2rem;
+    font-family: "Mulish", serif;
+    font-weight: 500;
+    color: #000;
 }
-.copyright{
-  font-family: "Baloo Da 2",serif;
-  font-size: 1.2rem;
-  color: #fff;
-  text-align: center;
-  margin-left: -8rem;
+
+.footer2 .img-footer2{
+    max-height: 4rem;
+    width: auto;
+    grid-row: 1;
+    grid-column: 2;
+    margin: auto;
 }
-.copyright p{
-    padding-bottom: 0;
-    margin: 0;
-    text-align: center;
+.footer2 .gov{
+    grid-row: 2 / span 2;
+    grid-column: 2;
+    font-size: 1.2rem;
+    font-family: "Mulish", serif;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #fff;
 }
-.img-footer{
-  height: 100%;
-  width: 22rem;
+.footer2 .social-list2{
+    grid-column: 3;
+    grid-row: 1 / 4;
+    margin: auto;
 }
-.social-list a{
-  margin: 0 1rem;
+.footer2 .social-list2 i{
+    font-size: 1.8rem;
+    color:#fff
 }
-.social-list i{
-  font-size: 1.4rem;
-  color:#fff
+.footer2 .social-list2 i:hover{
+    font-size: 1.8rem;
+    cursor: pointer;
+    color:#fdc533;
+    transition: .3s;
+}
+.footer2 .social-list2 a{
+    margin: 0 1rem;
+}
+.footer2 .gooappl-btn{
+    grid-column: 1;
+    grid-row: 1 / 5;
+    margin: auto;
+}
+.footer2 .gooappl-btn .img-btn{
+    height: 2.2em;
+    width: auto;
+    cursor: pointer;
+    margin: 0 1rem;
+}
+.footer2 a{
+    color: #000;
+    text-decoration: underline;
 }
 
 
@@ -526,8 +553,39 @@ p{
     .menu-link{
         font-size: 1.6rem;
     }
-    .copyright{
-        margin-left: -1rem;
+    .footer2{
+        height: 34rem;
+        grid-template-rows: 1fr 1fr 2fr 2fr 1fr;
+    }
+    .footer2 .social-list2{
+        grid-row: 1;
+        margin: auto;
+        grid-column: 1 / 5;
+    }
+    .footer2 .copyright2{
+        grid-row: 5;
+        grid-column: 1 / 5;
+    }
+    
+    .footer2 .img-footer2{
+        grid-row: 3;
+        grid-column: 1 / 5;
+
+    }
+    .footer2 .gov{
+        grid-row: 4;
+        grid-column: 1 / 5;
+    }
+    .footer2 .gooappl-btn{
+        grid-row: 2;
+        margin: auto;
+        grid-column: 1 / 5;
+    }
+    .footer2 .gooappl-btn .img-btn{
+        height: 2.2em;
+        width: auto;
+        cursor: pointer;
+        margin: 0 1rem;
     }
 }
 @media(max-width:1200px){
@@ -550,30 +608,21 @@ p{
     .banner button:hover{
         width: 12rem;
     }
-    .footer{
-        height: 16rem;
+    .footer2 .gov{
+        font-size: 1rem;
+        line-height: 1.2rem;
     }
-    .footer-content{
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 50%;
+    .footer2 .copyright2{
+        font-size: 1rem;
     }
-    .copyright{
-        order: 1;
-        margin-top: 1rem;
-    }
-    .img-footer{
-        margin: 1rem 0;
+    .footer2 .img-footer2{
+        max-height: 3.4rem;
     }
 }
 @media (max-width: 820px){
     .logo img{
         max-height: 4rem;
     }
-
-
-
 }
 @media(max-width: 740px){
     .banner h1{
