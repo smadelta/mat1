@@ -284,6 +284,59 @@ p{
 }
 
 
+/*------------- about ------------*/
+
+
+.about{
+    padding: 1rem;
+    background-color: #fafafa;
+    display: block;
+    box-sizing: border-box; 
+}
+.container3{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    max-width: 80%;
+}
+.frame{
+    display: flex;
+    position: relative;
+}
+.frame-text{
+    flex: 0 0 50%;
+    background-color: #7fa8bf;
+    border-top-left-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem;
+    padding: 5rem 1rem;
+}
+.frame-text h3{
+    color:#fff;
+    font-size: 3.4rem;
+}
+.frame-text p{
+    color:#fff;
+    font-size: 2.2rem;
+    margin-top: 2rem;
+}
+.frame-photo{
+    flex: 0 0 50%;
+    background-color: #7fa8bf;
+    border-top-right-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+}
+.frame-photo img{
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+    object-fit: cover;
+    border-style: none;
+    vertical-align: middle;
+}
+
 /*------------- app ------------*/
 
 
@@ -592,6 +645,16 @@ p{
     .container2 .box-container{
         grid-template-columns: repeat(2,1fr);
     }
+    .container3{
+        max-width: 100%;
+    }
+    .frame-text h3{
+        font-size: 2.6rem;
+    }
+    .frame-text p{
+        font-size: 1.4rem;
+        margin-top: 2rem;
+    }
 
 }
 @media(max-width:1000px){
@@ -646,6 +709,30 @@ p{
     }
     .container2 .box-container .box{
         padding:.4rem .8rem;
+    }
+    .frame{
+        flex-direction: column;
+    }
+    .frame-text{
+        padding: 1rem 0;
+    }
+    .frame-text p{
+        margin-top: 0;
+    }
+    .frame-text{
+        border-top-left-radius: 2.5rem;
+        border-bottom-left-radius:0;
+        border-top-right-radius: 2.5rem;
+    }
+    .frame-photo{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 2.5rem;
+        border-bottom-left-radius: 2.5rem;
+    }
+    .frame-photo img{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 2.5rem;
+        border-bottom-left-radius: 2.5rem;
     }
 }
 @media(max-width: 500px){
