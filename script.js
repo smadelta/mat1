@@ -17,6 +17,8 @@ container.addEventListener("click",(e)=>{
     
 })
 
+
+// Slider
 const slides = document.querySelectorAll('.slide');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
@@ -61,18 +63,13 @@ prev.addEventListener('click', e => {
     slideInterval = setInterval(nextSlide, intervalTime);
   }
 });
-
-
 // Auto slide
 if (auto) {
   slideInterval = setInterval(nextSlide, intervalTime);
 }
 
 
-
-
 // Smooth Scroll
-
 function SmoothVerticalScrolling(e, time, where) {
   var eTop = e.getBoundingClientRect().top;
   var eAmt = eTop / 100;
@@ -89,3 +86,24 @@ function SVS_B(eAmt, where) {
   if (where == "top")
       window.scrollBy(0, eAmt);
 }
+
+
+// Cookies
+let cookieModal = document.querySelector(".cookie-consent-modal")
+let cancelCookieBtn = document.querySelector(".btn.cancel")
+let acceptCookieBtn = document.querySelector(".btn.accept")
+
+cancelCookieBtn.addEventListener("click", function (){
+    cookieModal.classList.remove("active")
+})
+acceptCookieBtn.addEventListener("click", function (){
+    cookieModal.classList.remove("active")
+    localStorage.setItem("cookieAccepted", "yes")
+})
+
+setTimeout(function (){
+    let cookieAccepted = localStorage.getItem("cookieAccepted")
+    if (cookieAccepted != "yes"){
+        cookieModal.classList.add("active")
+    }
+}, 100)
